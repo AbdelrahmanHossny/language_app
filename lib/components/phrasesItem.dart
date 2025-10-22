@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:language_app1/components/subItem.dart';
 import 'package:language_app1/model/ItemModel.dart';
 
-class Item extends StatelessWidget {
-  const Item({super.key, required this.item, required this.color});
-  final ItemModel item;
+class PharseItem extends StatelessWidget {
+  const PharseItem({super.key, required this.number, required this.color});
+  final ItemModel number;
   final Color color;
   @override
   Widget build(BuildContext context) {
@@ -15,13 +15,7 @@ class Item extends StatelessWidget {
         height: 100.h,
         color: color,
         child: Row(
-          children: [
-            Container(
-              color: Color(0xffFFF3E0),
-              child: Image(image: AssetImage(item.image!)),
-            ),
-            Expanded(child: SubItem(number: item)),
-          ],
+          children: [Expanded(child: SubItem(number: number))],
         ),
       ),
     );

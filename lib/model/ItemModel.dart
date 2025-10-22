@@ -1,11 +1,11 @@
-class Number {
-  final String image;
+class ItemModel {
+  final String? image;
   final String jpName;
   final String enName;
   final String sound;
 
-  const Number({
-    required this.image,
+  const ItemModel({
+    this.image,
     required this.jpName,
     required this.enName,
     required this.sound,
